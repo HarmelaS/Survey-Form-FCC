@@ -1,0 +1,88 @@
+/* background #11111B
+form background #424756
+input background #838895
+text/check/radio #ffffff
+ */
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #11111b;
+  color: #ffffff;
+}
+
+.line {
+  border: 0.5px solid #000;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+h1,
+#description {
+  margin: 0;
+}
+
+.student-info {
+  padding: 10px 10px 10px 0px;
+}
+
+#email-label,
+#name-label,
+#number-label {
+  display: none;
+  /* width: 80px;
+  display: inline-block; */
+}
+
+/* input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 300px;
+  height: 35px;
+  border-bottom: 1px solid #ffffff;
+}  */
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 50%;
+  border: none;
+  padding: 5px 0px;
+  outline: none;
+  background-color: #424756;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.4s 0.4s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+.survey-main {
+  width: 950px;
+  height: 950px;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  background-color: #424756;
+}
+/* 
+input:focus::placeholder {
+  color: transparent;
+} */

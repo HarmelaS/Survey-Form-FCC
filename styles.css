@@ -4,68 +4,90 @@ input background #838895
 text/check/radio #ffffff
  */
 
-* {
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #11111b;
-  color: #ffffff;
+  background-color: #e2e2e2;
 }
 
-.line {
-  border: 0.5px solid #000;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  /* padding: 30px; */
+}
+
+.image-section {
+  /* width: 50%; */
+  float: right;
+}
+
+.main-img {
+  display: block;
+}
+
+.mobile-img {
+  display: none;
 }
 
 h1 {
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-p {
-  margin-bottom: 5px;
-}
-
-h1,
-#description {
+  font-family: "Poppins", sans-serif;
+  font-size: 42px;
   margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 50px;
+  color: #c32525;
 }
 
-.student-info {
-  padding: 10px 10px 10px 0px;
+#description {
+  font-family: "Lora", sans-serif;
+  margin: 10px 0px 20px 0px;
 }
 
-#email-label,
-#name-label,
-#number-label {
-  display: none;
-  /* width: 80px;
-  display: inline-block; */
+#survey {
+  float: left;
+  background-color: #fff;
+  position: relative;
+  padding: 20px 20px 0px 20px;
+  width: 50%;
 }
-
-/* input[type="text"],
-input[type="email"],
-input[type="number"] {
-  width: 300px;
-  height: 35px;
-  border-bottom: 1px solid #ffffff;
-}  */
 
 input[type="text"],
 input[type="email"],
 input[type="number"] {
   width: 50%;
   border: none;
-  padding: 5px 0px;
+  margin: 15px 0px;
+  padding-bottom: 10px;
   outline: none;
-  background-color: #424756;
-  border-bottom: 1px solid #ffffff;
-  color: #ffffff;
+  border-bottom: 1px solid #000000;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
+}
+
+label,
+#checkbox-description,
+#radio-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 
 input::placeholder {
-  color: #ffffff;
+  color: #000000;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {
@@ -74,15 +96,143 @@ input::placeholder {
   opacity: 1;
 }
 
-.survey-main {
-  width: 950px;
-  height: 950px;
-  padding: 20px;
-  border-radius: 20px;
-  margin: 0 auto;
-  background-color: #424756;
+#email-label,
+#name-label,
+#number-label {
+  display: none;
 }
-/* 
-input:focus::placeholder {
-  color: transparent;
-} */
+
+select {
+  background: transparent;
+  width: 200px;
+  padding: 2px;
+  margin-left: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-left: 20px;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+input#cb-option,
+input#radio-option {
+  margin-right: 15px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+input#cb-option,
+input#radio-option,
+.radio-label,
+.checkbox-label {
+  cursor: pointer;
+}
+
+textarea {
+  box-sizing: border-box;
+  resize: none;
+  max-width: 50%;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  width: 200px;
+  height: 55px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c32525;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffcc00;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .main {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  .main-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  h1 {
+    margin-top: 30px;
+  }
+
+  h1,
+  #description {
+    margin-left: 20px;
+  }
+
+  #description {
+    width: 380px;
+  }
+
+  #survey,
+  .image-section {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  #survey {
+    padding: 0px;
+  }
+
+  .student-info {
+    margin-left: 20px;
+  }
+
+  select,
+  textarea {
+    margin: 10px 0px 0px 25px;
+  }
+
+  label,
+  #checkbox-description,
+  #radio-description {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  button {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+
+  .sub-button {
+    display: flex;
+    justify-content: left;
+    margin: 25px;
+  }
+}

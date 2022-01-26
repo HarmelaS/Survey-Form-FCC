@@ -1,3 +1,3 @@
 # Under Construction
 
-## Survey form project from FreeCodeCamp
+## Survey form project from FreeCodeCamp course
